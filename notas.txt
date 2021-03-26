@@ -1,0 +1,29 @@
+¿Qué es un Test? ¿Qué tipos de Test Existen? Jest
+
+-Como desarrolladores, debemos garantizar que el código escrito cumpla con ciertas expectativas, esto lo hacemos
+  con los test.
+-Una prueba nos va a permitir definir la forma en que probamos un bloque de código, y como generamos la 
+  expectativa que necesitamos.
+-Esto nos asegura que cumpla con el estandard, y que sea enviado a producción sin errores.
+-Las pruebas se dividen en funcionales y no funcionales, dentro de las 1eras estan las unitarias.
+-Sí estamos trabajando en una página web, debemos asegurarnos que cada sección cumpla con lo que estamos 
+  preparando. De igual forma, cada una de las interacciones que tenemos con el usuario.
+-Jest funciona en proyectos que usan babel, typescript, node, react, angular, vue, entre otros.
+-Tiene herramientas como el Coverage, que genera un reporte informando que tanto esamos probando de nuestros
+  proyectos, y que nos falta por probar.
+
+-Instalamos jest como desarrollo.
+-La carpeta donde irán las pruenas estará dentro de src, y se llamarpa __test__.
+-Para correr las pruebas, debe configurarse que el script 'test' ejecute jest.
+-Siempre irá a buscar a esa carpeta que creamos, por su nombre.
+
+Crear una prueba:
+  -Se usa el metodo test().
+  -Tiene como params. la descripción de la prueba y la función, esta definirá lo que hará la prueba.
+  -Los pasos que explicaremos será lo que irá aquí adentro.
+
+-expect(valor): El valor de lo que estamos esperando/evaluando. expect tiene varios metodos para evaluar, y sí 
+  esa evaluación(es) se cumple, pasará la prueba.
+    .toMatch(/text/): Evalua sí la cadena de texto esperada contiene el texto que se colocó entre '/ /'. Se 
+      colocá así para delimitar el texto, por lo que, sí se usan comillas, evaluará que la cadena esperada sea
+      completamente igual a la colocada en este metodo.
