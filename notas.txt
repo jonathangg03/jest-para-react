@@ -1,22 +1,24 @@
-Implementando pruebas a promesas
+Watch y Coverage
 
--Promesas:
-  .En el test() retornaremos la ejecución de la promesa.
-  .El el then() es que haremos las pruebas en caso de que salga bien con su valor devuelto.
-  
--Async-await:
-  .La función del test() llevará el async.
-  .Ejecutamos la promesa esperando su valor.
-  .Obteniendo ese valor en la constante, con ese es que podremos realizar pruebas.
+-Dentro del expect(), podemos ejecutar metodos, y validar cual será su salida.
+-Podemos usar typeOf(), y sí el colocado dentro es un string, la validación será sí
+  el resultado es 'string'.
 
--Funciones antes o despues de las pruebas:
-  .Se pueden ejecutar funciones antes o despues de las pruebas.
-  .Como ejemplo del profesor, una función que antes de ellas, conecte con una DB, realiza las
-    pruebas, y al final, desconecte de la DB.
-  .Para ello, como parametro de los metodos que se explicarán irá una función, que será la que se
-    ejecutará según se requiera:
-      .afterEach(): Despues de cada prueba.
-      .afterAll(): Despues de todas las pruebas.
-      .beforeEach(): Antes de cada prueba.
-      .beforeAll(): Antes de todas las pruebas.
-  .Se colocan los metodos fuera de los test().
+Ejecutar solo un archivo de pruebas:
+  -npx jest [ruta de la prueba].
+  -Instalar jest de manera global.
+  -Crear un script en el package.json.
+
+Ejecutar un conjunto de pruebas:
+  -El metodo describe() tiene una descripción y una función.
+  -Aquí colocaremos un conjunto de test().
+  -La idea es agrubar los test dentro de un mismo describe sí tienen similitudes.
+
+Mantener ejecutando pruebas:
+  -Sí al script se le agrega el flag --watch, sí realizamos algun cambio, las pruebas
+    se vuelven a realizar.
+  -Tambien nos dá un menú con diferentes acciones.
+
+Coverage:
+  -Agregando el flag --coverage, nos genera una carpeta, esta tiene otra llamada 'icov-report'.
+  -Esta tiene un index.html, con el alcance que estan teniendo las pruebas y que no se está probando,
