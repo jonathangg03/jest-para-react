@@ -1,17 +1,22 @@
-Implementando pruebas en boolean, array, number y callback
+Implementando pruebas a promesas
 
--Number:
-  .toBe(): Se sabe que toBe sirve para saber sí algo es igual a lo que este dentro.
-  .toBeGreaterThan(): Saber que el numero esperado es mayor al que se coloque aquí.
+-Promesas:
+  .En el test() retornaremos la ejecución de la promesa.
+  .El el then() es que haremos las pruebas en caso de que salga bien con su valor devuelto.
   
--Booleanos:
-  .toBeTruthy(): Se cumple sí el elemento esperado es verdadero (no tiene parametro).
+-Async-await:
+  .La función del test() llevará el async.
+  .Ejecutamos la promesa esperando su valor.
+  .Obteniendo ese valor en la constante, con ese es que podremos realizar pruebas.
 
--Callbacks:
-  .Se define el callback.
-  .Dentro del test(), se ejecuta el callback, este por parametro debe tener una función.
-  .Dentro de esa función es que realizaremos la prueba (expect).
-  .Sí el callback tenía un parametro, al ejecutar la función le damos valor a ese param, dentro
-    de la func. que será el callback, sí esa función tendrá ese parametro, que hace referencia
-    al valor que le colocamos al ejecutar la función.
-  .Ese valor es con el que podremos realizar pruebas.
+-Funciones antes o despues de las pruebas:
+  .Se pueden ejecutar funciones antes o despues de las pruebas.
+  .Como ejemplo del profesor, una función que antes de ellas, conecte con una DB, realiza las
+    pruebas, y al final, desconecte de la DB.
+  .Para ello, como parametro de los metodos que se explicarán irá una función, que será la que se
+    ejecutará según se requiera:
+      .afterEach(): Despues de cada prueba.
+      .afterAll(): Despues de todas las pruebas.
+      .beforeEach(): Antes de cada prueba.
+      .beforeAll(): Antes de todas las pruebas.
+  .Se colocan los metodos fuera de los test().
